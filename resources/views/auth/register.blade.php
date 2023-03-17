@@ -4,6 +4,8 @@
 
 <link rel="stylesheet" href="{{ URL::asset('css/auth.css') }}" />
 <div class="container">
+<form method="POST" action="{{ route('register') }}">
+  @csrf
     <div class="row">
       <div class="col">
         <h3>Register</h3>
@@ -27,8 +29,8 @@
             @enderror
         </div>
         <div class="mb-3">
-          <input id="phonenumber" type="text" class="form-control @error('phonenumber') is-invalid @enderror" name="phonenumber" placeholder="Phone Number" value="{{ old('phonenumber') }}" required autocomplete="phonenumber" autofocus>
-            @error('phonenumber')
+          <input id="phoneNumber" type="text" class="form-control @error('phoneNumber') is-invalid @enderror" name="phoneNumber" placeholder="Phone Number" value="{{ old('phoneNumber') }}" required autocomplete="phoneNumber" autofocus>
+            @error('phoneNumber')
               <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
               </span>
@@ -45,11 +47,14 @@
         <div class="mb-3">
           <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
         </div>
-        <button type="button" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-primary">
+            {{ __('Register') }}
+        </button>
       </div>
       <div class="col">
         <p><img align="right" src="{{URL::asset('/image/auth-pic.png')}}" alt="picnette"></p>
       </div>
     </div>
+</form>
   </div>
 @endsection

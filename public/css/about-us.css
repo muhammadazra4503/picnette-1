@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.container-header {
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+.container-body {
+    margin-left: 110px;
+    margin-right: 110px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.col {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.all-member h1 {
+    text-align: center;
+    padding-bottom: 40px;
+}

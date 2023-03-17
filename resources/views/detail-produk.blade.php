@@ -14,24 +14,28 @@
     <div class="container-header">
         <div class="row">
             <div class="col">
-                <img src="{{URL::asset('/image/detail-produk.png')}}" alt="">
+                <img src="{{URL::asset('product/'.$product->foto)}}" alt="">
             </div>
 
             <div class="col">
                 <h1>Deskripsi Paket Foto</h1>
+                <p>{{$product->desc_product}}</p>
                 <p>Harga</p>
-                <h3>Rp. ?.?00.000</h3><hr>
+                <h3>Rp. {{$product->price}}</h3><hr>
                 <p>Yang Termasuk Kedalam Paket</p>
-                <p>> 4 x Shoot <br>
-                    > 4 File Picnette Cloud <br>
+                <p>> {{$product->banyak_shoot}} x Shoot <br>
+                    > {{$product->banyak_file}} File Picnette Cloud <br>
 
                     > Setiap orang mendapatkan : <br>
-                    1 Cetak ukuran 12RP + Blok (15x30cm) <br>
+                    {{$product->benefit}} <br>
 
-                    > Harga tertera adalah harga per orang <br>
-                    > Berlaku mulai 5 orang <br>
+                    > Berlaku mulai {{$product->banyak_shoot}} orang <br>
+                    @if($product->foto_keluarga == 1)
+                    > Paket berlaku untuk photo keluarga</p>
+                    @else
                     > Paket tidak berlaku untuk photo keluarga</p>
-                <a href=""><button type="submit" class="btn1 btn-primary">Book Now</button></a>
+                    @endif
+                <a href="{{ url('/form-booking', $product->id) }}"><button type="submit" class="btn1 btn-primary">Book Now</button></a>
             </div>
         </div>
 

@@ -69,7 +69,7 @@
                             class="fab fa-phone"><img src="{{URL::asset('/image/phone.png')}}" width="40" height="40" alt="" loading="lazy"></i>0813 - 6425 - 9348</a>
                 </section>
             </div>
-            <a href=""><button type="submit" class="btn1 btn-primary">Book Now</button></a>
+            <a href="/photo-studio"><button type="submit" class="btn1 btn-primary">Book Now</button></a>
         </div>
     </body>
 </html>

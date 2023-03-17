@@ -1,0 +1,12 @@
+.container-body {
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
+}

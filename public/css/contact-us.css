@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.container-header {
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+.container-body {
+    margin-left: 110px;
+    margin-right: 110px;
+    padding-top: 30px;
+}
+
+.col {
+    margin-top: 20px;
+}
+
+.all-member h1 {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.form-group {
+    padding-bottom: 10px;
+}

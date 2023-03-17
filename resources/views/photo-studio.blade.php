@@ -30,83 +30,20 @@
                 <hr>
             </div>
             <div class="row">
+                @foreach ($product as $item)
                 <div class="col-lg-3 mb-3">
-                    <a href="{{ url('/detail-produk') }}">
+                    <a href="{{ url('/product-detail', $item->id) }}">
                         <div class="card border-0">
-                            <img src="{{URL::asset('/image/bg1.png')}}" class="card-img-top" alt="...">
+                            <img src="{{URL::asset('product/'.$item->foto)}}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">Paket Studio Minimalis</p>
-                                <h5 class="card-title">Rp. 500.000</h5>
+                                <p class="card-text">{{$item->name_product}}</p>
+                                <h5 class="card-title">Rp. {{$item->price}}</h5>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 mb-3">
-                    <div class="card border-0">
-                        <img src="{{URL::asset('/image/bg2.png')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Paket Studio TotheGenkz</p>
-                            <h5 class="card-title">Rp. 1.500.000</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 mb-3">
-                    <div class="card border-0">
-                        <img src="{{URL::asset('/image/bg3.png')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Paket Studio Happie Couplezz</p>
-                            <h5 class="card-title">Rp. 2.000.000</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 mb-3">
-                    <div class="card border-0">
-                        <img src="{{URL::asset('/image/bg4.png')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Paket Studio PasFoto</p>
-                            <h5 class="card-title">Rp. 50.000</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 mb-3">
-                        <div class="card border-0">
-                            <img src="{{URL::asset('/image/bg5.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Paket Studio Gemez</p>
-                                <h5 class="card-title">Rp. 500.000</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="card border-0">
-                            <img src="{{URL::asset('/image/bg6.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Paket Studio Gokil</p>
-                                <h5 class="card-title">Rp. 500.000</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="card border-0">
-                            <img src="{{URL::asset('/image/bg7.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Paket Studio Wisuda Gokil</p>
-                                <h5 class="card-title">Rp. 2.000.000</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="card border-0">
-                            <img src="{{URL::asset('/image/bg8.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Paket Studio Cool</p>
-                                <h5 class="card-title">Rp. 600.000</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+            </div>
     </div>
 </body>
 </html>

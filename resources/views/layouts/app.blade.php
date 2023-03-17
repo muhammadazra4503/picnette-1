@@ -27,17 +27,17 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">ABOUT US</a>
+                            <a class="nav-link" href="{{ url('/about-us') }}">ABOUT US</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT US</a>
+                            <a class="nav-link" href="{{ url('/contact-us') }}">CONTACT US</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">PESANAN</a>
+                            <a class="nav-link" href="{{ url('/pesanan') }}">PESANAN</a>
                         </li>
                     </ul>
                 </div>
@@ -99,5 +99,6 @@
             @yield('content')
         </main>
     </div>
+    @stack('scripts')
 </body>
 </html>
