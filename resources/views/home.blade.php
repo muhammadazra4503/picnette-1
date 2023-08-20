@@ -49,7 +49,7 @@
         </div>
 
         <div class="container-contact" id="section3">
-            <h4>Informasi Lengkap</h4>
+            <h4>Informasi</h4>
             <div class="row">
                 <section class="mb-4">
                     <!-- Facebook -->
